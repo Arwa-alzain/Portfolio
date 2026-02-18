@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Arwa AlZain | Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -12,161 +16,395 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="my-portfolio">Arwa</h1>
+      <div class="logo">Arwa</div>
       <nav>
         <ul>
           <li><a href="#home" class="home">Home</a></li>
-          <li><a href="#about" class="about-me">About me</a></li>
+          <li><a href="#about" class="about-me">About</a></li>
           <li><a href="#skills" class="skliis">Skills</a></li>
           <li><a href="#projects" class="project">Projects</a></li>
-          <li><a href="#contact" class="constact">Contact</a></li>
+          <li><a href="#contact" class="constact">Get In Touch</a></li>
         </ul>
       </nav>
+      <button id="themeToggle" class="theme-btn">🌙</button>
     </header>
-
     <div class="hero-section" id="home">
-      <div class="image-container">
-        <img
-          class="image-cs"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvMk0MpbxghqYka4_cnSCYgkzvhqXOufr-9A&s"
-          alt="Portfolio"
-        />
-      </div>
-      <h1 class="hero-title">Arwa AlZain</h1>
-      <p class="hero-description">Web developer and interested in AI</p>
+      <h1>Arwa AlZain</h1>
+      <h2>Computer Science</h2>
+      <p>Web Development & interest in AI</p>
       <div class="hero-buttons">
-        <a href="#projects" class="view-my-project">View My Projects</a>
-        <a href="Arwa Alzain CV.pdf" target="_blank">
-          <button class="cv">Download CV</button>
-        </a>
+        <a
+          href="https://drive.google.com/file/d/1iLjxp3JzIyYmPs4BiT8HvFp4XlAR9MqD/view?usp=sharing"
+          target="_blank"
+          class="cv-btn"
+          >View My CV</a
+        >
+        <a href="#projects" id="btn" class="project-btn">View My Projects</a>
       </div>
     </div>
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <div class="about">
+        <p>
+          I am a final-year Computer Science student interested in web and
+          application development, building practical solutions using modern web
+          tecchnologies. I focus on both front-end and back-end development,
+          with a growing interest in Artifical Intelligence. This portfolio
+          showcases my projects and learning journey.
+        </p>
+      </div>
+    </section>
 
-    <div class="about-section">
-      <h2 class="about-title" id="about">About Me</h2>
-      <p class="about-description">
-        A final-year Computer Science student specializing in web application
-        development. I am developing my skills in back-end development with a
-        focus on performance and user experience, and I aim to build practical,
-        scalable technical solutions using artificial intelligence
-        technologies."
-      </p>
-    </div>
-
-    <div class="skills-section" id="skills">
-      <h2 class="skills-title">Skills</h2>
-      <div class="skills-container">
-        <div class="skills-card">
-          <h3 class="programming">Programming</h3>
-        </div>
-        <div class="skills-card">
-          <h3 class="Database">Database Management</h3>
-        </div>
-        <div class="skills-card">
-          <h3 class="web">Web Development</h3>
-        </div>
-        <div class="skills-card">
-          <h3 class="Communication">Communication & Teamwork</h3>
-        </div>
-        <div class="skills-card">
-          <h3 class="Adaptability">Adaptability & Continuous Learnin</h3>
+    <section id="skills">
+      <div class="skills-section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <p>HTML</p>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-css3-alt"></i>
+            <p>CSS</p>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-js"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-react"></i>
+            <p>React.js</p>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-php"></i>
+            <p>PHP</p>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-python"></i>
+            <p>Python</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-database"></i>
+            <p>MySQL</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-database"></i>
+            <p>Data Analyst</p>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-git-alt"></i>
+            <p>Git & GitHub</p>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="skills-section">
+        <h2 class="section-title">Soft Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fas fa-users"></i>
+            <p>Teamwork</p>
+          </div>
 
-    <div class="projects-section" id="projects">
-      <h2 class="projects-title">Projects</h2>
-      <div class="projects-container">
+          <div class="skill-card">
+            <i class="fas fa-comments"></i>
+            <p>Communication</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-lightbulb"></i>
+            <p>Problem-Solving</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-clock"></i>
+            <p>Time Management</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-user-tie"></i>
+            <p>Leadership</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-sync-alt"></i>
+            <p>Adaptability</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-brain"></i>
+            <p>Critical Thinking</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
         <div class="project-card">
-          <h3 class="project-name">Dhikr App</h3>
-          <p class="project-description">
-            "Dhikr" is a simple application that helps users perform daily
-            remembrances and tasbeeh (praise of Allah) easily through a calming
-            interface and an interactive counter.
+          <img
+            src="images/GameX-Tech.png"
+            alt="GameX-Tech"
+            class="project-image"
+          />
+          <h3>GameX Tech Dashboard Website</h3>
+          <p>
+            A modern dashboard for managing an electronics & accessories store
+            with Gaming API integration.
           </p>
           <a
-            href="https://github.com/Arwa-alzain/Dhikr-App"
-            class="btn view-project"
-            >View Project</a
+            href="https://github.com/Arwa-alzain/GameXTechDashboard"
+            target="_blank"
+            >View on GitHub →</a
           >
         </div>
         <div class="project-card">
-          <h3 class="project-name">Riwa Store</h3>
-          <p class="project-description">
+          <img
+            src="images/BrewMaster.png"
+            alt="BrewMaster"
+            class="project-image"
+          />
+          <h3>BrewMaster Tech Dashboard Website</h3>
+          <p>
+            A modern dashboard for managing a coffee shop & inventory with
+            real-time Weather API integration.
+          </p>
+          <a
+            href="https://github.com/Arwa-alzain/BrewMasterDashboard"
+            target="_blank"
+            >View on GitHub →</a
+          >
+        </div>
+        <div class="project-card">
+          <img src="images/riwa.png" alt="Riwa" class="project-image" />
+          <h3>Riwa Website</h3>
+          <p>
             Design and development of a front-end and back-end e-commerce
             website for selling handmade beaded and crystal bags, focusing on an
             elegant design and a smooth user experience.
           </p>
-          <a href="https://github.com/Arwa-alzain/Riwa" class="btn view-project"
-            >View Project</a
+          <a href="https://github.com/Arwa-alzain/Riwa" target="_blank"
+            >View on GitHub →</a
           >
         </div>
         <div class="project-card">
-          <h3 class="project-name">IQRAA Library</h3>
-          <p class="project-description">
-            IQRAA app is an electronic library that allows the user to borrow
-            electronic books for a specific period of time.
+          <img
+            src="images/time.png"
+            alt="Time-Perfumes-Website"
+            class="project-image"
+          />
+          <h3>Time Perfumes Website</h3>
+          <p>
+            Design and development of both the front-end and back-end for a
+            perfume e-commerce website, focusing on a modern design and a smooth
+            user experience.
+          </p>
+          <a href="https://github.com/Arwa-alzain/TimePerfumes" target="_blank"
+            >View on GitHub →</a
+          >
+        </div>
+        <div class="project-card">
+          <img src="images/calc.png" alt="Calculator" class="project-image" />
+          <h3>Calculator Website</h3>
+          <p>
+            A simple calculator web application built using HTML, CSS, and PHP
+            to practice form handling and basic server-side logic.
           </p>
           <a
-            href="https://github.com/Arwa-alzain/IQRAA"
-            class="btn view-project"
-            >View Project</a
+            href="https://github.com/Arwa-alzain/CalculatorWebsite"
+            target="_blank"
+            >View on GitHub →</a
           >
         </div>
         <div class="project-card">
-          <h3 class="project-name">Mini Social App</h3>
-          <p class="project-description">
-            A simple social media application inspired by Platform X (formerly Twitter), allowing users to sign in and share their thoughts and posts easily.
+          <img
+            src="images/Mini-Social-App.png"
+            alt="Mini-Social-App"
+            class="project-image"
+          />
+          <h3>Mini Social App</h3>
+          <p>
+            A simple social media application inspired by Platform X (formerly
+            Twitter), allowing users to sign in and share their thoughts and
+            posts easily.
           </p>
           <a
             href="https://github.com/Arwa-alzain/Mini-Social-App"
-            class="btn view-project"
-            >View Project</a
+            target="_blank"
+            >View on GitHub →</a
+          >
+        </div>
+
+        <div class="project-card">
+          <img
+            src="images/Dhikr-App.png"
+            alt="Dhikr-App"
+            class="project-image"
+          />
+          <h3>Dhikr App</h3>
+          <p>
+            "Dhikr" is a simple application that helps users perform daily
+            remembrances and tasbeeh (praise of Allah) easily through a calming
+            interface and an interactive counter.
+          </p>
+          <a href="https://github.com/Arwa-alzain/Dhikr-App" target="_blank"
+            >View on GitHub →</a
           >
         </div>
         <div class="project-card">
-          <h3 class="project-name">Dictionary App</h3>
-          <p class="project-description">
-            The "Dictionary App" is an application built with Flutter that allows users to easily search and explore word meanings and examples. The app integrates with an online dictionary API to provide real-time word definitions.          </p>
+          <img
+            src="images/Dictionary-App.png"
+            alt="Dictionary-App"
+            class="project-image"
+          />
+          <h3>Dictionary App</h3>
+          <p>
+            The "Dictionary App" is an application built with Flutter that
+            allows users to easily search and explore word meanings and
+            examples. The app integrates with an online dictionary API to
+            provide real-time word definitions.
+          </p>
           <a
             href="https://github.com/Arwa-alzain/Dictionary-App"
-            class="btn view-project"
-            >View Project</a
+            target="_blank"
+            >View on GitHub →</a
+          >
+        </div>
+        <div class="project-card">
+          <img src="images/IQRAA.png" alt="IQRAA" class="project-image" />
+          <h3>IQRAA App</h3>
+          <p>
+            IQRAA is a library management system that streamlines book borrowing
+            and user management. It includes secure authentication, book
+            tracking, receipt generation, reporting tools for managers, and
+            borrowing history access for users. The system also sends
+            notifications for upcoming due dates and overdue books.
+          </p>
+          <a href="https://github.com/Arwa-alzain/IQRAA" target="_blank"
+            >View on GitHub →</a
           >
         </div>
       </div>
-    </div>
+    </section>
+    <section id="certificates">
+      <h2 class="section-title">Certificates</h2>
+    
+      <div class="certificates-grid">
+    
+        <div class="certificate-card">
+          <h3>EYOUTH Learning plan</h3>
+          <p>IBMSkillsBuild • 2026</p>
+          <a href="images/IBMSkillsBuild.jpeg " target="_blank">
+            View Certificate →
+          </a>
+        </div>
 
-    <footer class="contact-section" id="contact">
-      <h2 class="contact-title">Contact</h2>
-      <p class="contact-description">
-        To contact me with any questions or for collaboration opportunities:
-      </p>
-      <div class="social-icons">
-        <a
-          href="mailto:arwaahalzain@gmail.com"
-          class="social-icon email"
-          title="Email"
-        >
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/arwa-alzain/"
-          class="social-icon linkedin"
-          title="LinkedIn"
-          target="_blank"
-        >
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a
-          href="https://github.com/Arwa-alzain"
-          class="social-icon github"
-          title="GitHub"
-          target="_blank"
-        >
-          <i class="fab fa-github"></i>
-        </a>
+        <div class="certificate-card">
+          <h3>Microsoft Certified: Azure AI Fundamentals</h3>
+          <p>Microsoft • 2025</p>
+          <a href="https://learn.microsoft.com/en-us/users/arwaalzain-4933/credentials/e8239109f115e925" target="_blank">
+            View Certificate →
+          </a>
+        </div>
+    
+        <div class="certificate-card">
+          <h3>Data Analyst Preparation Program DAPP</h3>
+          <p>Google Developer Student Clubs • 2024</p>
+          <a href="https://drive.google.com/file/d/1wq4L80gp-rG-Utml7f3v1vqoWl9hRHMx/view" target="_blank">
+            View Certificate →
+          </a>
+        </div>
+    
+      </div>
+    </section>
+    
+
+    <section id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      <form
+        method="post"
+        class="form animate fade-up show"
+        action="https://api.sheetmonkey.io/form/oguvNqrhBVNcYvbTEMhqok"
+      >
+        <div class="inputs_form">
+          <input
+            type="text"
+            placeholder="Full Name"
+            id="fullname"
+            name="Name"
+            required=""
+          />
+          <input
+            type="text"
+            placeholder="Email"
+            id="em"
+            name="Email"
+            required=""
+          />
+          <input type="text" placeholder="Subjec" id="subject" name="Subject" />
+          <textarea
+            name="Message"
+            id="textarea"
+            rows="10"
+            placeholder="Your Message"
+          ></textarea>
+        </div>
+        <button type="submit" class="btnn" id="send">Send Message</button>
+      </form>
+    </section>
+    <footer>
+      <div class="footer-span">
+        <div class="ico">
+          <div class="contact">
+            <a
+              href="mailto:arwaahalzain@gmail.com"
+              class="social-icon email"
+              title="Email"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/arwa-alzain/"
+              class="social-icon linkedin"
+              title="LinkedIn"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/Arwa-alzain"
+              class="social-icon github"
+              title="GitHub"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="foteer-span">
+        <span>© 2026 Arwa - All Rights Reserved</span>
+      </div>
       </div>
     </footer>
   </body>
+  <script>
+    const themeBtn = document.getElementById("themeToggle");
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+      themeBtn.textContent = "☀️";
+    }
+
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        themeBtn.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      } else {
+        themeBtn.textContent = "🌙 ";
+        localStorage.setItem("theme", "light");
+      }
+    });
+  </script>
 </html>

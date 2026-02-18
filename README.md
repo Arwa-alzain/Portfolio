@@ -3,7 +3,7 @@
 Personal portfolio showcasing my journey as a **Computer Science** graduate specializing in **Web Development** and **AI**. 
 
 ## 🌐 Live Preview
-View the project live here: [portfolio-swart-omega-24.vercel.app](https://portfolio-swart-omega-24.vercel.app)
+View the project live here: [portfolio-swart-omega-24.vercel.app](https://arwa-alzain.github.io/Portfolio/)
 
 ---
 

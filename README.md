@@ -2,9 +2,6 @@
 
 Personal portfolio showcasing my journey as a **Computer Science** graduate specializing in **Web Development** and **AI**. 
 
-## 🌐 Live Preview
-View the project live here: [arwa-alzain.github.io/Portfolio/](arwa-alzain.github.io/Portfolio/)
-
 ---
 
 ## 🛠 Tech Stack

@@ -165,12 +165,12 @@ section {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+  gap: 15px;
 }
 
 .skill-card {
   background: white;
-  padding: 25px;
+  padding: 14px ;
   text-align: center;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -238,33 +238,49 @@ section {
 /* ===== Contact ===== */
 .contact {
   text-align: center;
+  margin-top: 20px;
 }
 
 .contact a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
-  margin: 10px 15px;
-  border-radius: 50%;
-  background: var(--gradient);
-  color: white;
+  width: 55px;
+  height: 55px;
+  margin: 10px 12px;
+  border-radius: 50%; 
+  background: white; 
+  color: var(--primary); 
+  font-size: 1.5rem;
   text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 5px 20px rgba(79, 70, 229, 0.3);
-  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover Effect */
 .contact a:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 30px rgba(79, 70, 229, 0.5);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(79,70,229,0.3);
+  background: var(--gradient);
+  color: white;
 }
+
+/* Dark Mode */
+body.dark-mode .contact a {
+  background: #1e293b;
+  color: var(--secondary);
+}
+
+body.dark-mode .contact a:hover {
+  background: var(--secondary);
+  color: white;
+}
+
 
 /* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 50px 20px;
+  padding: 20px 20px;
   background: linear-gradient(135deg, #1e293b, #0f172a);
   color: white;
   margin-top: 50px;
@@ -546,4 +562,45 @@ body.dark-mode .certificate-card a:hover {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+}
+
+/* ===== Project Skills Tags ===== */
+.skills-used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* space between rectangles */
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.skills-used span {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--light); /* light gray background */
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px; /* rounded rectangle */
+  border: 1px solid #d1d5db; /* subtle border */
+  transition: 0.3s ease;
+}
+
+.skills-used span:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  cursor: default;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .skills-used span {
+  background: #334155; /* darker gray for dark mode */
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+body.dark-mode .skills-used span:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: white;
 }

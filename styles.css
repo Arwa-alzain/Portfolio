@@ -604,3 +604,58 @@ body.dark-mode .skills-used span:hover {
   border-color: var(--secondary);
   color: white;
 }
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #fff; 
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+    /* 🌙 Dark Mode Mobile Menu */
+    body.dark-mode .header nav ul {
+      background: #1e293b;
+    }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .header nav ul {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+  }
+
+  .header nav ul.active {
+    display: flex;
+  }
+}
+body.dark-mode .menu-toggle {
+  color: #f8fafc;
+}

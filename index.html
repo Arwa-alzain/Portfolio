@@ -17,6 +17,7 @@
   <body>
     <header class="header">
       <div class="logo">Arwa</div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
       <nav>
         <ul>
           <li><a href="#home" class="home">Home</a></li>
@@ -30,13 +31,10 @@
     </header>
     <div class="hero-section" id="home">
       <h1>Arwa AlZain</h1>
-      <h2>Computer Science</h2>
-      <p>Web Development & interest in AI</p>
+      <h2>Computer Science Student</h2>
+      <p>Passionate about Web Development and Artificial Intelligence</p>
       <div class="hero-buttons">
-        <a
-          href="images/Arwa Alzain CV.pdf"
-          target="_blank"
-          class="cv-btn"
+        <a href="images/Arwa-Alzain-CV.pdf" target="_blank" class="cv-btn"
           >View My CV</a
         >
         <a href="#projects" id="btn" class="project-btn">View My Projects</a>
@@ -73,11 +71,19 @@
       <h2 class="section-title">About</h2>
       <div class="about">
         <p>
-          I am a final-year Computer Science student interested in web and
-          application development, building practical solutions using modern web
-          tecchnologies. I focus on both front-end and back-end development,
-          with a growing interest in Artifical Intelligence. This portfolio
-          showcases my projects and learning journey.
+          I am a Final-year Computer Science student specializing in Frontend
+          Development and working toward becoming a Full-Stack Developer. I
+          enjoy building responsive, user-focused web applications and turning
+          ideas into interactive digital experiences. Through academic and
+          personal projects, I have developed strong skills in modern web
+          technologies, REST API integration, and writing clean, maintainable
+          code. I am also interested in Artificial Intelligence and how it can
+          enhance web applications. I earned the Azure AI Fundamentals
+          certification from Microsoft, which strengthened my understanding of
+          AI concepts and cloud-based AI services. My goal is to contribute to
+          meaningful products, grow into a Full-Stack Developer, and continue
+          learning technologies that improve user experience and product
+          quality.
         </p>
       </div>
     </section>
@@ -86,6 +92,24 @@
       <div class="skills-section">
         <h2 class="section-title">Technical Skills</h2>
         <div class="skills-grid">
+          <div class="skill-card">
+            <p>Python</p>
+          </div>
+          <div class="skill-card">
+            <p>Java</p>
+          </div>
+          <div class="skill-card">
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-card">
+            <p>C++</p>
+          </div>
+          <div class="skill-card">
+            <p>Dart</p>
+          </div>
+          <div class="skill-card">
+            <p>React</p>
+          </div>
           <div class="skill-card">
             <p>HTML</p>
           </div>
@@ -96,10 +120,7 @@
             <p>Bootstrap</p>
           </div>
           <div class="skill-card">
-            <p>JavaScript</p>
-          </div>
-          <div class="skill-card">
-            <p>React.js</p>
+            <p>Flutter</p>
           </div>
           <div class="skill-card">
             <p>PHP</p>
@@ -108,34 +129,43 @@
             <p>MySQL</p>
           </div>
           <div class="skill-card">
-            <p>Postman</p>
-          </div>
-          <div class="skill-card">
-            <p>REST APIs</p>
-          </div>
-          <div class="skill-card">
-            <p>Git & GitHub</p>
-          </div>
-          <div class="skill-card">
-            <p>Flutter</p>
-          </div>
-          <div class="skill-card">
-            <p>Dart</p>
+            <p>Microsoft Access</p>
           </div>
           <div class="skill-card">
             <p>Firebase</p>
           </div>
           <div class="skill-card">
-            <p>Python</p>
+            <p>Computer Vision</p>
           </div>
           <div class="skill-card">
-            <p>Java</p>
+            <p>CNN</p>
           </div>
           <div class="skill-card">
-            <p>Excel</p>
+            <p>Model Training</p>
           </div>
           <div class="skill-card">
-            <p>Data Analysis</p>
+            <p>Data Preprocessing</p>
+          </div>
+          <div class="skill-card">
+            <p>Git</p>
+          </div>
+          <div class="skill-card">
+            <p>GitHub</p>
+          </div>
+          <div class="skill-card">
+            <p>VS Code</p>
+          </div>
+          <div class="skill-card">
+            <p>Figma</p>
+          </div>
+          <div class="skill-card">
+            <p>REST APIs</p>
+          </div>
+          <div class="skill-card">
+            <p>Responsive Design</p>
+          </div>
+          <div class="skill-card">
+            <p>OOP</p>
           </div>
         </div>
       </div>
@@ -454,6 +484,9 @@
         <div class="foteer-span">
           <span>© 2026 Arwa AlZain- All Rights Reserved.</span>
           <span>Made with passion 🤍</span>
+          <span
+            >"The future belongs to those who can turn ideas into reality"</span
+          >
         </div>
       </div>
     </footer>
@@ -477,6 +510,14 @@
         themeBtn.textContent = "🌙 ";
         localStorage.setItem("theme", "light");
       }
+    });
+  </script>
+  <script>
+    const menuBtn = document.getElementById("menuToggle");
+    const navLinks = document.querySelector(".header nav ul");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
     });
   </script>
 </html>

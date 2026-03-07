@@ -157,36 +157,104 @@ section {
   font-size: large;
 }
 
-/* ===== Skills ===== */
-.skills-section {
-  margin-bottom: 30px;
-}
+/* ===== Skills Section ===== */
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-}
+.skills-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  margin-top:40px;
+  }
+  
+  /* Card */
+  
+  .skills-card{
+  padding:25px;
+  border-radius:16px;
+  border:1px solid var(--card-border);
+  background:var(--card-bg);
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+  position:relative;
+  overflow:hidden;
+  }
+  
+  /* Glow effect */
+  
+  .skills-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:2px;
+  background:linear-gradient(to right,transparent,var(--primary),transparent);
+  opacity:0.4;
+  }
+  
+  .skills-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+  border-color:var(--primary);
+  }
+  
+  .skills-card h3{
+  margin-bottom:15px;
+  font-size:18px;
+  color:var(--primary);
+  }
+  
+  .skills-card ul{
+  list-style:none;
+  padding:0;
+  }
+  
+  .skills-card li{
+  padding:6px 0;
+  font-size:14px;
+  color:var(--text);
+  position:relative;
+  padding-left:18px;
+  }
+  
+  .skills-card li::before{
+  content:"•";
+  position:absolute;
+  left:0;
+  color:var(--primary);
+  }
 
-.skill-card {
-  background: white;
-  padding: 14px ;
-  text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: 0.3s ease;
-}
+  .skills-card h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+    font-size:18px;
+    color:var(--primary);
+    }
+    
+    .skills-card h3 i{
+    font-size:20px;
+    color:var(--primary);
+    }
 
-.skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(79, 70, 229, 0.2);
-}
+  /* Light mode */
 
-.skill-card i {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: var(--primary);
-}
+:root{
+  --primary:#4f46e5;
+  --text:#333;
+  --card-bg:#ffffff;
+  --card-border:#e5e7eb;
+  }
+  
+  /* Dark mode */
+  
+  body.dark-mode{
+    --primary:#22c55e;
+    --text:#e5e7eb;
+    --card-bg:#1e293b;
+    --card-border:#334155;
+    }
 
 /* ===== Projects ===== */
 .projects-grid {
@@ -229,11 +297,37 @@ section {
   margin-bottom: 15px; /* space between paragraph and link */
 }
 
-.project-card a {
-  text-decoration: none;
-  color: var(--primary);
-  font-weight: 600;
-}
+.project-links{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+  }
+  
+  .project-links a{
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  transition:0.3s;
+  }
+  
+  .github-btn{
+  background:#24292e;
+  color:white;
+  }
+  
+  .demo-btn{
+  background:var(--primary);
+  color:white;
+  }
+  
+  .project-links a:hover{
+  transform:translateY(-2px);
+  opacity:0.9;
+  }
 
 /* ===== Contact ===== */
 .contact {
@@ -658,4 +752,84 @@ body.dark-mode .skills-used span:hover {
 }
 body.dark-mode .menu-toggle {
   color: #f8fafc;
+}
+
+.success-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  min-width: 300px;
+  max-width: 90%;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  z-index: 2000;
+  background: #ffffff;
+  color: #334155;
+  transition: 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  backdrop-filter: blur(8px); 
+}
+
+.success-card.show {
+  display: flex;
+  transform: translate(-50%, -50%) scale(1); 
+  opacity: 1;
+}
+
+.success-card i {
+  font-size: 2.2rem;
+  color: var(--primary);
+}
+
+.success-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.success-card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.success-card button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.success-card button:hover {
+  background: var(--secondary);
+}
+
+/* Dark Mode */
+body.dark-mode .success-card {
+  background: #1e293b;
+  color: #f8fafc;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .success-card h3,
+body.dark-mode .success-card i {
+  color: var(--secondary);
+}
+
+body.dark-mode .success-card button {
+  background: var(--secondary);
+}
+
+body.dark-mode .success-card button:hover {
+  background: var(--primary);
 }

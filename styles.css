@@ -589,25 +589,46 @@ body.dark-mode .form textarea:focus {
   border-color: var(--secondary);
   box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
 }
+
+.cert-group-title{
+  margin-top:40px;
+  margin-bottom:15px;
+  font-size:1.4rem;
+  color:var(--primary);
+  text-align:center;
+}
 .certificates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-top:20px;
+}
+/* Responsive */
+@media(max-width:992px){
+  .certificates-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .certificates-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 .certificate-card {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: 0.3s ease;
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  text-align:center;
+  cursor:pointer;
+  transition:0.3s;
 }
 
 .certificate-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 20px 45px rgba(79, 70, 229, 0.2);
 }
 
 .certificate-card h3 {
@@ -618,19 +639,25 @@ body.dark-mode .form textarea:focus {
   color: #64748b;
   margin-bottom: 12px;
 }
-
-.certificate-card a {
-  text-decoration: none;
-  color: var(--primary);
-  font-weight: 600;
-  transition: 0.3s;
+.certificate-image{
+  width:100%;
+  height:200px;
+  object-fit:contain;
+  background:#f1f5f9;
+  border-radius:10px;
+  margin-bottom:15px;
 }
-
+.certificate-card a {
+  display:inline-block;
+  margin-top:10px;
+  font-size:14px;
+  color:var(--primary);
+  text-decoration:none;
+}
 .certificate-card a:hover {
   color: var(--secondary);
 }
 /* DARK MODE - Certificates */
-
 body.dark-mode .certificate-card {
   background: #1e293b;          /* dark card background */
   color: #f8fafc;               /* white text */
@@ -656,6 +683,40 @@ body.dark-mode .certificate-card a:hover {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 3000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+  display: block;
+  margin: 60px auto;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #f1f1f1;
 }
 
 /* ===== Project Skills Tags ===== */
